@@ -11,24 +11,66 @@
 **Kinglykrab**
 
 * Fix $npc-&gt;RecalculateSkills\(\) in Perl.
-* Add $client-&gt;MoveZone\(zone\_short\_name\) to Perl.
-* Add client:MoveZone\(zone\_short\_name\) to Lua.
-* Add $client-&gt;MoveZoneGroup\(zone\_short\_name\) to Perl.
-* Add client:MoveZoneGroup\(zone\_short\_name\) to Lua.
-* Add $client-&gt;MoveZoneRaid\(zone\_short\_name\) to Perl.
-* Add client:MoveZoneRaid\(zone\_short\_name\) to Lua.
-* Add quest::crosszoneassigntaskbycharid\(character\_id, task\_id, enforce\_level\_requirement\) to Perl.
-* Add eq.cross\_zone\_assign\_task\_by\_char\_id\(character\_id, task\_id, enforce\_level\_requirement\) to Lua.
-* Add quest::crosszoneassigntaskbygroupid\(group\_id, task\_id, enforce\_level\_requirement\) to Perl.
-* Add eq.cross\_zone\_assign\_task\_by\_group\_id\(group\_id, task\_id, enforce\_level\_requirement\) to Lua.
-* Add quest::crosszoneassigntaskbyraidid\(raid\_id, task\_id, enforce\_level\_requirement\) to Perl.
-* Add eq.cross\_zone\_assign\_task\_by\_raid\_id\(raid\_id, task\_id, enforce\_level\_requirement\) to Lua.
-* Add quest::crosszoneassigntaskbyguildid\(guild\_id, task\_id, enforce\_level\_requirement\) to Perl.
-* Add eq.cross\_zone\_assign\_task\_by\_guild\_id\(guild\_id, task\_id, enforce\_level\_requirement\) to Lua.
-* Add $client-&gt;GetDisciplineTimer\(timer\_id\) to Perl.
-* Add client:GetDisciplineTimer\(timer\_id\) to Lua.
-* Add $client-&gt;ResetDisciplineTimer\(timer\_id\) to Perl.
-* Add client:ResetDisciplineTimer\(timer\_id\) to Lua.
+
+#### Added Quest API MoveZone Methods
+
+{% tabs %}
+{% tab title="Perl" %}
+```perl
+$client->MoveZone(zone_short_name);
+$client->MoveZoneGroup(zone_short_name);
+$client->MoveZoneRaid(zone_short_name);
+```
+{% endtab %}
+
+{% tab title="Lua" %}
+```
+client:MoveZone(zone_short_name);
+client:MoveZoneGroup(zone_short_name);
+client:MoveZoneRaid(zone_short_name);
+```
+{% endtab %}
+{% endtabs %}
+
+#### Added Quest API CrossZone Task Methods
+
+{% tabs %}
+{% tab title="Perl" %}
+```perl
+quest::crosszoneassigntaskbycharid(character_id, task_id, enforce_level_requirement);
+quest::crosszoneassigntaskbygroupid(group_id, task_id, enforce_level_requirement);
+quest::crosszoneassigntaskbyraidid(raid_id, task_id, enforce_level_requirement);
+quest::crosszoneassigntaskbyguildid(guild_id, task_id, enforce_level_requirement);
+```
+{% endtab %}
+
+{% tab title="Lua" %}
+```lua
+eq.cross_zone_assign_task_by_char_id(character_id, task_id, enforce_level_requirement);
+eq.cross_zone_assign_task_by_group_id(group_id, task_id, enforce_level_requirement);
+eq.cross_zone_assign_task_by_raid_id(raid_id, task_id, enforce_level_requirement);
+eq.cross_zone_assign_task_by_guild_id(guild_id, task_id, enforce_level_requirement);
+```
+{% endtab %}
+{% endtabs %}
+
+#### Added Quest API Discipline Task Methods
+
+{% tabs %}
+{% tab title="Perl" %}
+```perl
+$client->GetDisciplineTimer(timer_id);
+$client->ResetDisciplineTimer(timer_id);
+```
+{% endtab %}
+
+{% tab title="Lua" %}
+```lua
+client:GetDisciplineTimer(timer_id);
+client:ResetDisciplineTimer(timer_id);
+```
+{% endtab %}
+{% endtabs %}
 
 ## 6/23/2020
 
