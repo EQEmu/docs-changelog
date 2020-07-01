@@ -1,5 +1,83 @@
 # 2020
 
+## 6/30/2020
+
+**Kinglykrab**
+
+**Add GetDisplayAC\(\) to Perl/Lua.**
+
+{% tabs %}
+{% tab title="Perl" %}
+```perl
+$client->GetDisplayAC();
+```
+{% endtab %}
+
+{% tab title="Lua" %}
+```lua
+client:GetDisplayAC();
+```
+{% endtab %}
+{% endtabs %}
+
+**Add DyeArmorBySlot\(\) to Perl/Lua.**
+
+{% tabs %}
+{% tab title="Perl" %}
+```perl
+$client->DyeArmorBySlot(slot, red, green, blue, [use_tint = 0x00]);
+```
+{% endtab %}
+
+{% tab title="Lua" %}
+```lua
+client:DyeArmorBySlot(slot, red, green, blue, [use_tint = 0x00]);
+```
+{% endtab %}
+{% endtabs %}
+
+**Add MoveZoneInstance methods to Perl/Lua.**
+
+{% tabs %}
+{% tab title="Perl" %}
+```perl
+$client->MoveZoneInstance(instance_id);
+$client->MoveZoneInstanceGroup(instance_id);
+$client->MoveZoneInstanceRaid(instance_id);
+```
+{% endtab %}
+
+{% tab title="Lua" %}
+```lua
+client:MoveZoneInstance(instance_id);
+client:MoveZoneInstanceGroup(instance_id);
+client:MoveZoneInstanceRaid(instance_id);
+```
+{% endtab %}
+{% endtabs %}
+
+**Add cross-zone player move utilities.**
+
+{% tabs %}
+{% tab title="Perl" %}
+```perl
+quest::crosszonemoveplayerbycharid(character_id, zone_short_name);
+quest::crosszonemoveplayerbygroupid(group_id, zone_short_name);
+quest::crosszonemoveplayerbyraidid(raid_id, zone_short_name);
+quest::crosszonemoveplayerbyguildid(guild_id, zone_short_name);
+```
+{% endtab %}
+
+{% tab title="Second Tab" %}
+```lua
+eq.crosszonemoveplayerbycharid(character_id, zone_short_name);
+eq.crosszonemoveplayerbygroupid(group_id, zone_short_name);
+eq.crosszonemoveplayerbyraidid(raid_id, zone_short_name);
+eq.crosszonemoveplayerbyguildid(guild_id, zone_short_name);
+```
+{% endtab %}
+{% endtabs %}
+
 ## 6/28/2020
 
 **Akkadius**
