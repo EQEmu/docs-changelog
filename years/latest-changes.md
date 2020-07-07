@@ -1,5 +1,121 @@
 # 2020
 
+## 7/7/2020
+
+**Kinglykrab**
+
+**Add hot reload saylinks.**
+
+**Completely overhauled cross zone and world wide methods in quest API.**
+
+{% tabs %}
+{% tab title="Perl" %}
+```text
+quest::crosszonecastspellbycharid(character_id, spell_id);
+quest::crosszonecastspellbygroupid(group_id, spell_id);
+quest::crosszonecastspellbyraidid(raid_id, spell_id);
+quest::crosszonecastspellbyguildid(guild_id, spell_id);
+quest::crosszonedisabletaskbycharid(character_id, task_id);
+quest::crosszonedisabletaskbygroupid(group_id, task_id);
+quest::crosszonedisabletaskbyraidid(raid_id, task_id);
+quest::crosszonedisabletaskbyguildid(guild_id, task_id);
+quest::crosszoneenabletaskbycharid(character_id, task_id);
+quest::crosszoneenabletaskbygroupid(group_id, task_id);
+quest::crosszoneenabletaskbyraidid(raid_id, task_id);
+quest::crosszoneenabletaskbyguildid(guild_id, task_id);
+quest::crosszonefailtaskbycharid(character_id, task_id);
+quest::crosszonefailtaskbygroupid(group_id, task_id);
+quest::crosszonefailtaskbyraidid(raid_id, task_id);
+quest::crosszonefailtaskbyguildid(guild_id, task_id);
+quest::crosszonemoveinstancebycharid(character_id, instance_id);
+quest::crosszonemoveinstancebygroupid(group_id, instance_id);
+quest::crosszonemoveinstancebyraidid(raid_id, instance_id);
+quest::crosszonemoveinstancebyguildid(guild_id, instance_id);
+quest::crosszoneremovespellbycharid(character_id, spell_id);
+quest::crosszoneremovespellbygroupid(group_id, spell_id);
+quest::crosszoneremovespellbyraidid(raid_id, spell_id);
+quest::crosszoneremovespellbyguildid(guild_id, spell_id);
+quest::crosszoneresetactivitybycharid(character_id, task_id, activity_id);
+quest::crosszoneresetactivitybygroupid(group_id, task_id, activity_id);
+quest::crosszoneresetactivitybyraidid(raid_id, task_id, activity_id);
+quest::crosszoneresetactivitybyguildid(guild_id, task_id, activity_id);
+quest::crosszoneupdateactivitybycharid(character_id, task_id, activity_id, activity_count);
+quest::crosszoneupdateactivitybygroupid(group_id, task_id, activity_id, activity_count);
+quest::crosszoneupdateactivitybyraidid(raid_id, task_id, activity_id, activity_count);
+quest::crosszoneupdateactivitybyguildid(guild_id, task_id, activity_id, activity_count);
+quest::worldwideassigntask(task_id, enforce_level_requirement);
+quest::worldwidecastspell(spell_id);
+quest::worldwidedisabletask(task_id);
+quest::worldwideenabletask(task_id);
+quest::worldwidefailtask(task_id);
+quest::worldwidemessage(type, message);
+quest::worldwidemove(zone_short_name);
+quest::worldwidemoveinstance(instance_id);
+quest::worldwideremovespell(spell_id);
+quest::worldwideremovetask(task_id);
+quest::worldwideresetactivity(task_id, activity_id);
+quest::worldwidesetentityvariableclient(variable_name, variable_value);
+quest::worldwidesetentityvariablenpc(variable_name, variable_value);
+quest::worldwidesignalclient(signal);
+quest::worldwidesignalnpc(signal);
+quest::worldwideupdateactivity(task_id, activity_id, activity_count);
+```
+{% endtab %}
+
+{% tab title="Lua" %}
+```lua
+eq.cross_zone_cast_spell_by_char_id(character_id, spell_id);
+eq.cross_zone_cast_spell_by_group_id(group_id, spell_id);
+eq.cross_zone_cast_spell_by_raid_id(raid_id, spell_id);
+eq.cross_zone_cast_spell_by_guild_id(guild_id, spell_id);
+eq.cross_zone_disable_task_by_char_id(character_id, task_id);
+eq.cross_zone_disable_task_by_group_id(group_id, task_id);
+eq.cross_zone_disable_task_by_raid_id(raid_id, task_id);
+eq.cross_zone_disable_task_by_guild_id(guild_id, task_id);
+eq.cross_zone_enable_task_by_char_id(character_id, task_id);
+eq.cross_zone_enable_task_by_group_id(group_id, task_id);
+eq.cross_zone_enable_task_by_raid_id(raid_id, task_id);
+eq.cross_zone_enable_task_by_guild_id(guild_id, task_id);
+eq.cross_zone_fail_task_by_char_id(character_id, task_id);
+eq.cross_zone_fail_task_by_group_id(group_id, task_id);
+eq.cross_zone_fail_task_by_raid_id(raid_id, task_id);
+eq.cross_zone_fail_task_by_guild_id(guild_id, task_id);
+eq.cross_zone_move_instance_by_char_id(character_id, instance_id);
+eq.cross_zone_move_instance_by_group_id(group_id, instance_id);
+eq.cross_zone_move_instance_by_raid_id(raid_id, instance_id);
+eq.cross_zone_move_instance_by_guild_id(guild_id, instance_id);
+eq.cross_zone_remove_spell_by_char_id(character_id, spell_id);
+eq.cross_zone_remove_spell_by_group_id(group_id, spell_id);
+eq.cross_zone_remove_spell_by_raid_id(raid_id, spell_id);
+eq.cross_zone_remove_spell_by_guild_id(guild_id, spell_id);
+eq.cross_zone_reset_activity_by_char_id(character_id, task_id, activity_id);
+eq.cross_zone_reset_activity_by_group_id(group_id, task_id, activity_id);
+eq.cross_zone_reset_activity_by_raid_id(raid_id, task_id, activity_id);
+eq.cross_zone_reset_activity_by_guild_id(guild_id, task_id, activity_id);
+eq.cross_zone_update_activity_by_char_id(character_id, task_id, activity_id, activity_count);
+eq.cross_zone_update_activity_by_group_id(group_id, task_id, activity_id, activity_count);
+eq.cross_zone_update_activity_by_raid_id(raid_id, task_id, activity_id, activity_count);
+eq.cross_zone_update_activity_by_guild_id(guild_id, task_id, activity_id, activity_count);
+eq.world_wide_assign_task(task_id, enforce_level_requirement);
+eq.world_wide_cast_spell(spell_id);
+eq.world_wide_disable_task(task_id);
+eq.world_wide_enable_task(task_id);
+eq.world_wide_fail_task(task_id);
+eq.world_wide_message(type, message);
+eq.world_wide_move(zone_short_name);
+eq.world_wide_move_instance(instance_id);
+eq.world_wide_remove_spell(spell_id);
+eq.world_wide_remove_task(task_id);
+eq.world_wide_reset_activity(task_id, activity_id);
+eq.world_wide_set_entity_variable_client(variable_name, variable_value);
+eq.world_wide_set_entity_variable_npc(variable_name, variable_value);
+eq.world_wide_signal_client(signal);
+eq.world_wide_signal_npc(signal);
+eq.world_wide_update_activity(task_id, activity_id, activity_count);
+```
+{% endtab %}
+{% endtabs %}
+
 ## 6/30/2020
 
 **Kinglykrab**
@@ -68,7 +184,7 @@ quest::crosszonemoveplayerbyguildid(guild_id, zone_short_name);
 ```
 {% endtab %}
 
-{% tab title="Second Tab" %}
+{% tab title="Lua" %}
 ```lua
 eq.crosszonemoveplayerbycharid(character_id, zone_short_name);
 eq.crosszonemoveplayerbygroupid(group_id, zone_short_name);
