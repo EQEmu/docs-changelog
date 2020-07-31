@@ -1,3 +1,7 @@
+---
+description: EverQuest Emulator server changes for the year 2020
+---
+
 # 2020
 
 ## 7/30/2020
