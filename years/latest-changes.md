@@ -59,7 +59,6 @@ description: EverQuest Emulator server changes for the year 2020
 ### General
 
 * Add `Merchants` and `ZonePoints` logging categories
-* Added command \#gearup - which takes in tooling data to automatically gear a GM test toon with expansion specific best-in-class gear
 * Add fix for object display issues on RoF2 where objects would float, we are using GroundZ to correct these. Previous clients auto corrected objects and snapped them to the ground level, newer clients do not do this
 * Added `WorldContentService` which has the responsibility of setting / getting content context for the server, expansions, flags etc.
 * Added an optional second database connection to the config "content\_database" that will use a separate database connection for queries that target content tables. If none is specified it falls back to the default connection pointer
@@ -67,10 +66,19 @@ description: EverQuest Emulator server changes for the year 2020
 * Added magical global helper methods `ZoneID(string short_name)` `ZoneName(zone_id)` `ZoneLongName(zone_id)` which are all pre-loaded in memory to be used at the zone or world level for common needs
 * Added official single source of truth in `database_schema.h` which defines different table types `player`, `content`, `server`, `state`, `queryserv`, `login`, `version`
 * Fix issues with world CLI interface returning exit code 1 \(error\) versus exit code 0 \(success\)
-* Improvements to grid loading logic \(bulk load\)
 * Saylinks are added to `#fi` command for summoning items
-* Spawns prefer bulk loading
+
+### Performance Improvements
+
 * Task goallists now bulk load
+* Spawns prefer bulk loading
+* Improvements to grid loading logic \(bulk load\)
+
+### New Commands
+
+* Added in-command `#gearup` - which takes in tooling data to automatically gear a GM test toon with expansion specific best-in-class gear
+* Added in-game command `#copycharacter [source_char_name] [dest_char_name] [dest_account_name]`
+* `Added console CLI command via world character:copy-character`
 
 **Connection Label Messages**
 
