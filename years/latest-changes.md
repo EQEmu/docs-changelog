@@ -1,5 +1,250 @@
 # 2020
 
+## 7/30/2020
+
+**Akkadius**
+
+[This PR / changelog covers many things](https://github.com/EQEmu/Server/pull/1094); it would be preferred to not have a PR this large ever but considering the sweeping changes, it needed very careful testing, coordination and rollout
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">Component</th>
+      <th style="text-align:left">Reference</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left"><b>Expansions Support / Content Filtering</b>
+      </td>
+      <td style="text-align:left">
+        <p></p>
+        <p><a href="https://eqemu.gitbook.io/server/in-development/project-peq-expansions/expansion-content-filtering">https://eqemu.gitbook.io/server/in-development/project-peq-expansions/expansion-content-filtering</a>
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>Multi Tenancy</b>
+      </td>
+      <td style="text-align:left">
+        <p></p>
+        <p><a href="https://eqemu.gitbook.io/server/categories/database/multi-tenancy">https://eqemu.gitbook.io/server/categories/database/multi-tenancy</a>
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>Repository Pattern (Developer Tool)</b>
+      </td>
+      <td style="text-align:left">
+        <p></p>
+        <p><a href="https://eqemu.gitbook.io/server/in-development/developer-area/repositories">https://eqemu.gitbook.io/server/in-development/developer-area/repositories</a>
+        </p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+{% hint style="info" %}
+**This PR has been running on PEQ for over 3 months stable**
+{% endhint %}
+
+{% hint style="info" %}
+**PEQ Editor Accompanying Branch \(JJ\)** [https://github.com/ProjectEQ/peqphpeditor/compare/min-max-expansions](https://github.com/ProjectEQ/peqphpeditor/compare/min-max-expansions)
+{% endhint %}
+
+### General
+
+* Add `Merchants` and `ZonePoints` logging categories
+* Added command \#gearup - which takes in tooling data to automatically gear a GM test toon with expansion specific best-in-class gear
+* Add fix for object display issues on RoF2 where objects would float, we are using GroundZ to correct these. Previous clients auto corrected objects and snapped them to the ground level, newer clients do not do this
+* Added `WorldContentService` which has the responsibility of setting / getting content context for the server, expansions, flags etc.
+* Added an optional second database connection to the config "content\_database" that will use a separate database connection for queries that target content tables. If none is specified it falls back to the default connection pointer
+* Added connection labels to MySQL connect messages
+* Added magical global helper methods `ZoneID(string short_name)` `ZoneName(zone_id)` `ZoneLongName(zone_id)` which are all pre-loaded in memory to be used at the zone or world level for common needs
+* Added official single source of truth in `database_schema.h` which defines different table types `player`, `content`, `server`, `state`, `queryserv`, `login`, `version`
+* Fix issues with world CLI interface returning exit code 1 \(error\) versus exit code 0 \(success\)
+* Improvements to grid loading logic \(bulk load\)
+* Saylinks are added to `#fi` command for summoning items
+* Spawns prefer bulk loading
+* Task goallists now bulk load
+
+**Connection Label Messages**
+
+```text
+[ZoneServer] [Info] [MySQL] Connection [default] database [peq] at [mariadb]:[3306]
+[ZoneServer] [Info] [MySQL] Connection [content] database [peq_content] at [content-cdn.projecteq.net]:[16033]    
+```
+
+### Quests
+
+New methods available to support expansion & content filtering
+
+{% tabs %}
+{% tab title="Perl" %}
+```perl
+quest::is_content_flag_enabled(string flag_name)
+quest::set_content_flag(string flag_name, bool enabled)
+
+quest::is_classic_enabled()
+quest::is_the_ruins_of_kunark_enabled()
+quest::is_the_scars_of_velious_enabled()
+quest::is_the_shadows_of_luclin_enabled()
+quest::is_the_planes_of_power_enabled()
+quest::is_the_legacy_of_ykesha_enabled()
+quest::is_lost_dungeons_of_norrath_enabled()
+quest::is_gates_of_discord_enabled()
+quest::is_omens_of_war_enabled()
+quest::is_dragons_of_norrath_enabled()
+quest::is_depths_of_darkhollow_enabled()
+quest::is_prophecy_of_ro_enabled()
+quest::is_the_serpents_spine_enabled()
+quest::is_the_buried_sea_enabled()
+quest::is_secrets_of_faydwer_enabled()
+quest::is_seeds_of_destruction_enabled()
+quest::is_underfoot_enabled()
+quest::is_house_of_thule_enabled()
+quest::is_veil_of_alaris_enabled()
+quest::is_rain_of_fear_enabled()
+quest::is_call_of_the_forsaken_enabled()
+quest::is_the_darkend_sea_enabled()
+quest::is_the_broken_mirror_enabled()
+quest::is_empires_of_kunark_enabled()
+quest::is_ring_of_scale_enabled()
+quest::is_the_burning_lands_enabled()
+quest::is_torment_of_velious_enabled()
+quest::is_current_expansion_classic()
+quest::is_current_expansion_the_ruins_of_kunark()
+quest::is_current_expansion_the_scars_of_velious()
+quest::is_current_expansion_the_shadows_of_luclin()
+quest::is_current_expansion_the_planes_of_power()
+quest::is_current_expansion_the_legacy_of_ykesha()
+quest::is_current_expansion_lost_dungeons_of_norrath()
+quest::is_current_expansion_gates_of_discord()
+quest::is_current_expansion_omens_of_war()
+quest::is_current_expansion_dragons_of_norrath()
+quest::is_current_expansion_depths_of_darkhollow()
+quest::is_current_expansion_prophecy_of_ro()
+quest::is_current_expansion_the_serpents_spine()
+quest::is_current_expansion_the_buried_sea()
+quest::is_current_expansion_secrets_of_faydwer()
+quest::is_current_expansion_seeds_of_destruction()
+quest::is_current_expansion_underfoot()
+quest::is_current_expansion_house_of_thule()
+quest::is_current_expansion_veil_of_alaris()
+quest::is_current_expansion_rain_of_fear()
+quest::is_current_expansion_call_of_the_forsaken()
+quest::is_current_expansion_the_darkend_sea()
+quest::is_current_expansion_the_broken_mirror()
+quest::is_current_expansion_empires_of_kunark()
+quest::is_current_expansion_ring_of_scale()
+quest::is_current_expansion_the_burning_lands()
+quest::is_current_expansion_torment_of_velious()
+```
+{% endtab %}
+
+{% tab title="Lua" %}
+```
+eq.is_content_flag_enabled(string flag_name)
+eq.set_content_flag(string flag_name, bool enabled)
+
+eq.is_classic_enabled()
+eq.is_the_ruins_of_kunark_enabled()
+eq.is_the_scars_of_velious_enabled()
+eq.is_the_shadows_of_luclin_enabled()
+eq.is_the_planes_of_power_enabled()
+eq.is_the_legacy_of_ykesha_enabled()
+eq.is_lost_dungeons_of_norrath_enabled()
+eq.is_gates_of_discord_enabled()
+eq.is_omens_of_war_enabled()
+eq.is_dragons_of_norrath_enabled()
+eq.is_depths_of_darkhollow_enabled()
+eq.is_prophecy_of_ro_enabled()
+eq.is_the_serpents_spine_enabled()
+eq.is_the_buried_sea_enabled()
+eq.is_secrets_of_faydwer_enabled()
+eq.is_seeds_of_destruction_enabled()
+eq.is_underfoot_enabled()
+eq.is_house_of_thule_enabled()
+eq.is_veil_of_alaris_enabled()
+eq.is_rain_of_fear_enabled()
+eq.is_call_of_the_forsaken_enabled()
+eq.is_the_darkend_sea_enabled()
+eq.is_the_broken_mirror_enabled()
+eq.is_empires_of_kunark_enabled()
+eq.is_ring_of_scale_enabled()
+eq.is_the_burning_lands_enabled()
+eq.is_torment_of_velious_enabled()
+eq.is_current_expansion_classic()
+eq.is_current_expansion_the_ruins_of_kunark()
+eq.is_current_expansion_the_scars_of_velious()
+eq.is_current_expansion_the_shadows_of_luclin()
+eq.is_current_expansion_the_planes_of_power()
+eq.is_current_expansion_the_legacy_of_ykesha()
+eq.is_current_expansion_lost_dungeons_of_norrath()
+eq.is_current_expansion_gates_of_discord()
+eq.is_current_expansion_omens_of_war()
+eq.is_current_expansion_dragons_of_norrath()
+eq.is_current_expansion_depths_of_darkhollow()
+eq.is_current_expansion_prophecy_of_ro()
+eq.is_current_expansion_the_serpents_spine()
+eq.is_current_expansion_the_buried_sea()
+eq.is_current_expansion_secrets_of_faydwer()
+eq.is_current_expansion_seeds_of_destruction()
+eq.is_current_expansion_underfoot()
+eq.is_current_expansion_house_of_thule()
+eq.is_current_expansion_veil_of_alaris()
+eq.is_current_expansion_rain_of_fear()
+eq.is_current_expansion_call_of_the_forsaken()
+eq.is_current_expansion_the_darkend_sea()
+eq.is_current_expansion_the_broken_mirror()
+eq.is_current_expansion_empires_of_kunark()
+eq.is_current_expansion_ring_of_scale()
+eq.is_current_expansion_the_burning_lands()
+eq.is_current_expansion_torment_of_velious()
+```
+{% endtab %}
+{% endtabs %}
+
+### Repositories
+
+**Highlights**
+
+* Heavily reducing the mental overhead of having to interact with the database at the programmatic level
+* It creates an object representation of our tables \(persistence layer\) with a 1:1 mapping with what is in the source by having row values stored in a struct \(Data Transfer Object\)
+* We reduce manual overhead by having code generation generate our database table representations
+* Ease of maintenance; whenever we make schema changes, rerunning the repository updates fields and subsequent methods keeping code changes minimal 
+
+**Methods Implemented**
+
+* Single insertion covered by `InsertOne`
+* Single update covered by `UpdateOne`
+* Single delete covered by `DeleteOne`
+* Single select covered by `FindOne`
+* Bulk selection method via filtered `GetWhere(std::string where_filter)`
+* Bulk deletion method via filtered `DeleteWhere(std::string where_filter)`
+* Bulk insertion methods handled automatically via `InsertMany`
+* Select all covered by `All`
+
+**Code Generation**
+
+This is a result of the repository generator located at 
+
+```text
+./utils/scripts/generators/repository-generator.pl
+
+# Help
+perl ~/code/utils/scripts/generators/repository-generator.pl [server-location] [table_name|all]
+
+# Example
+perl ~/code/utils/scripts/generators/repository-generator.pl ~/server/ all
+```
+
+**Example Use \(How do I use this?\)**
+
+Starting at line 358 in the following Gist is an example CLI command that uses all of the above methods as examples; above line 358 is an example of what the a repository can look like
+
+[https://gist.github.com/Akkadius/e341974521692000aa1eeaa2b6dcb091\#file-gistfile1-cpp-L358](https://gist.github.com/Akkadius/e341974521692000aa1eeaa2b6dcb091#file-gistfile1-cpp-L358)
+
 ## 7/7/2020
 
 **Kinglykrab**
