@@ -4,6 +4,19 @@ description: EverQuest Emulator server changes for the year 2020
 
 # 2020
 
+## 8/15/2020
+
+**Akkadius**
+
+### Loot Drop Filtering Adjustments
+
+[https://github.com/EQEmu/Server/pull/1105](https://github.com/EQEmu/Server/pull/1105)
+
+* Add new logging category "Loot"
+* Adds fields `npc_min_level` and `npc_max_level` to `lootdrop_entries` which runs checks against the current NPC as long as the field values are non-zero
+* Fields `minlevel` and `maxlevel` are renamed to `trivial_min_level` and `trivial_max_level` respectively for `lootdrop_entries` for item drops to be filtered based on the player level
+* Before, `trivial_max_level` defaulted to `127` in the database, this became an issue on some servers and some scenarios, the default has been adjusted to simply be 0 and only check if the value is non-zero
+
 ## 7/30/2020
 
 **Akkadius**
