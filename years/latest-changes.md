@@ -14,7 +14,9 @@ description: EverQuest Emulator server changes for the year 2020
 
 Because the zone points that are sent to the client use an internal index lookup, it does not really give us power over determining or creating zone points in some cases. While this works in most of the data we've collected, there are scenarios where we'd like to create zone points entirely server side
 
-[![image](https://user-images.githubusercontent.com/3319450/90326965-7e740100-df54-11ea-86b8-213d6b7d227d.png)](https://user-images.githubusercontent.com/3319450/90326965-7e740100-df54-11ea-86b8-213d6b7d227d.png)
+![](../.gitbook/assets/image%20%287%29.png)
+
+![image](https://user-images.githubusercontent.com/3319450/90326965-7e740100-df54-11ea-86b8-213d6b7d227d.png)
 
 [![image](https://user-images.githubusercontent.com/3319450/90327109-d9f2be80-df55-11ea-8bc6-45b4f7d1193a.png)](https://user-images.githubusercontent.com/3319450/90327109-d9f2be80-df55-11ea-8bc6-45b4f7d1193a.png)
 
