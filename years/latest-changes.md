@@ -16,9 +16,7 @@ Because the zone points that are sent to the client use an internal index lookup
 
 ![](../.gitbook/assets/image%20%287%29.png)
 
-![image](https://user-images.githubusercontent.com/3319450/90326965-7e740100-df54-11ea-86b8-213d6b7d227d.png)
-
-[![image](https://user-images.githubusercontent.com/3319450/90327109-d9f2be80-df55-11ea-8bc6-45b4f7d1193a.png)](https://user-images.githubusercontent.com/3319450/90327109-d9f2be80-df55-11ea-8bc6-45b4f7d1193a.png)
+![](../.gitbook/assets/image%20%288%29.png)
 
 We've added 3 new fields to the `zone_points` table `is_virtual` `width` `height`
 
@@ -26,13 +24,13 @@ When a zone point is virtual it follows different rules, a box is created using 
 
 New command **\#showzonepoints** will list all of the zone points in a zone whether they are client side driven or virtual. It will also show a physical representation of the zone points in game
 
-[![image](https://user-images.githubusercontent.com/3319450/90327052-56d16880-df55-11ea-821d-ae2d67b98244.png)](https://user-images.githubusercontent.com/3319450/90327052-56d16880-df55-11ea-821d-ae2d67b98244.png)
+![](../.gitbook/assets/image%20%2810%29.png)
 
 ### Enhanced DevTools Menu
 
 DevTools menu now displays whenever a GM enters a zone, it also has many more tools available
 
-[![image](https://user-images.githubusercontent.com/3319450/90327069-7799be00-df55-11ea-8f8a-a048d9a36d1c.png)](https://user-images.githubusercontent.com/3319450/90327069-7799be00-df55-11ea-8f8a-a048d9a36d1c.png)
+![](../.gitbook/assets/image%20%289%29.png)
 
 ## 8/15/2020
 
