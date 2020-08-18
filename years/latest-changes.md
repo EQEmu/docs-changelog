@@ -6,6 +6,34 @@ description: EverQuest Emulator server changes for the year 2020
 
 ## 8/16/2020
 
+**Noudess**
+
+**Added new quest api to lua and perl to allow quests to enable/disable mob processing in empty zones.**
+
+This topic in general deserves some discussion.  In empty zones, mob processing typically does not take place, but quest timers do fire.  Over the past year I have added multiple enhancements to this, and this is the latest of those enhancements.
+
+Calling the quest::processmobswhilezoneempty\(1/0\) or lua counterpart eq.process\_mobs\_while\_zone\_empty\(true**/**false\) from a quest file enables or disables normal processing of mobs \(movement, aggro, etc\) in a zone, even when  that zone is empty.  Without these calls, a quest that say, happens once an hour and involves mobs spawning, moving and attacking \(each other\) would operate correctly in an empty zone.
+
+In the **past** few months I added these other enhancements along the same line:
+
+**A rule that allows mob processing to continue for a set \# of seconds after the zone goes empty.  This allows mobs that chased someone to a zone line for example, to move back rather than just standing at the zone line.**
+
+RULE\_INT\(Zone, SecondsBeforeIdle, 60, "Seconds before IDLE\_WHEN\_EMPTY define kicks in"\)
+
+**Allowing grid types 4 and 6 to always process, even when zone is empty.**
+
+This change allows mobs like Fippy that spawn and run a fixed grid and despawn to complete their run on time, rather than always  running the second someone enters a zone that was empty.   This could be used for boats on servers, if they are placed on one of these types of grids.
+
+This is the current logic that dictates mob processing.  So mob processing occurs if the flag process\_mobs\_while\_empty is set \(this is the new quest api I just added\), there are clients in the zone, the mob is on a grid that despawns at the end, or the zone is settling after all clients have left \(my rule I added above\).
+
+```text
+if (zone->process_mobs_while_empty || numclients > 0 ||
+			mob->GetWanderType() == 4 || mob->GetWanderType() == 6 ||
+			mob_settle_timer->Enabled())
+```
+
+## 8/16/2020
+
 **Akkadius**
 
 ### **Virtual Zone Points \(ZoneLines\)**
