@@ -4,6 +4,44 @@ description: EverQuest Emulator server changes for the year 2020
 
 # 2020
 
+## 9/19/2020
+
+**Noudess**
+
+**Fixed bugged pet buttons \(sit and taunt\)**
+
+The pet window sit button **was** often out of sync.  Also pet's were frequently still marked as sitting internal to the server due to the owner being attacked, or other issues. 
+
+A pet on guard will always return to guard after a battle. A pet sitting, will switch to follow mode after a battle.   Pet HP sitting regen bonus will now only happen when the pet is actually ooc and sitting.
+
+After hearing from [@Trust](https://github.com/Trust) that the taunt button was also out of sync often, I looked into that as well.
+
+The client stores the status of an active pet's taunt setting. This is stored across sessions. The old approach was to try and force taunt on, on pet creation as well as logging on and zoning. Client messages, sometimes in response to out attempts, would end up toggling our taunt value away from what we just set it to.
+
+Taunt now behaves as follows:
+
+**Clients previous to UF**
+
+Only client on/off clicks change state. Default is taunt on. Zoning and logging on both default to true.
+
+UF+ Clients:
+
+**On 1st time pet summoning via spell:**
+
+The pet is created with taunting off. This matches the client.
+
+**On logging in with an existing pet:**
+
+The client sends a message if the pet was taunting when you logged off, which will turn it on, since pet creation now defaults to taunting=false in the constructor.
+
+**On zoning:**
+
+The pet's state is set from it's saved value in the database. The client is not involved, but will match as pet state is preserved by the client across zoning.
+
+**On suspend minion:**
+
+The pet's state is set from it's saved value in the database. The client is not involved, but will match as pet state is preserved by the client across zoning.
+
 ## 8/16/2020
 
 **Noudess**
