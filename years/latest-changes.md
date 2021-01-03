@@ -4,6 +4,30 @@ description: EverQuest Emulator server changes for the year 2020
 
 # 2020
 
+## 12/30/2020
+
+#### hg
+
+### DZ / Expedition System
+
+The expedition system enables the ability to create Dynamic Zone instances managed by the client's Expedition interface window. This system allows clients to add and remove members of a Dynamic Zone while providing built-in event lockout timer support.
+
+The system is currently quest driven and provides quest APIs to create zone instances without the burden of manually tracking and validating lockout conflicts among characters. The system should have zero impact on servers that don't make use of it.
+
+#### Summary of additions
+
+* Added `Expeditions` and `DynamicZones` logging categories
+* Added `Expedition` and `DynamicZone` rule categories
+* Added database tables `expeditions`, `expedition_lockouts`, `expedition_members`, `character_expedition_lockouts`, and `dynamic_zones`
+* Added `#dz` GM/developer command \(minimum status 80\)
+* Added `#dzkickplayers` client command \(minimum status 0\)
+  * This performs the `/kickplayers exp` command for pre-RoF clients
+* Added Lua and Perl expedition quest APIs
+* Updated opcodes used for client expedition window and /dz commands
+  * Opcodes only updated for Titanium, SoD, Underfoot, and RoF2 clients \(SoF and RoF1 clients may be missing functionality\)
+
+For more details and quest API usage see the [Expedition System](https://eqemu.gitbook.io/server/categories/expedition-system) documentation.
+
 ## 9/19/2020
 
 **Noudess**
