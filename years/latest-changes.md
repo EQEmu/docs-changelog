@@ -4,6 +4,20 @@ description: EverQuest Emulator server changes for the year 2020
 
 # 2020
 
+### 1/3/2021
+
+#### Kinglykrab
+
+* Added $client-&gt;Fling\(\) to Perl.
+* Added $client-&gt;SetEbonCrystals\(\) to Perl.
+* Added $client-&gt;SetRadiantCrystals\(\) to Perl.
+* Added client:GetTargetRingX\(\) to Lua.
+* Added client:GetTargetRingY\(\) to Lua.
+* Added client:GetTargetRingZ\(\) to Lua.
+* Added client:Fling\(\) to Lua.
+* Added client:SetEbonCrystals\(\) to Lua.
+* Added client:SetRadiantCrystals\(\) to Lua.
+
 ## 12/30/2020
 
 #### hg
