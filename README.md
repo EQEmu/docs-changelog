@@ -8,7 +8,7 @@ This will allow us to be able to create expressive changelog notes, with visuals
 
 ## Years
 
-{% page-ref page="years/latest-changes.md" %}
+{% page-ref page="years/2020.md" %}
 
 {% page-ref page="years/2019.md" %}
 

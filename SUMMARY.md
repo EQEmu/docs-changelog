@@ -4,7 +4,8 @@
 
 ## Years
 
-* [2020](years/latest-changes.md)
+* [2021](years/latest-changes.md)
+* [2020](years/2020.md)
 * [2019](years/2019.md)
 * [2018](years/2018.md)
 * [2017](years/2017.md)
