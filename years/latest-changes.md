@@ -19,7 +19,7 @@ This changelog entry encompasses the past 6 months of updates and PR's
 **\[Akkadius\]** \[Hotfix\] Incorrect Perl usage method \(docs\)  
 **\[Akkadius\]** \[Hotfix\] Remove test branch fields from repo  
 **\[Akkadius\]** \[Installer\] Swap unstable powershell download for Perl LWP::Simple call  
-**\[Alex\]** \(HEAD -&gt; master, origin/master, origin/HEAD\) \[CLE\] Reset iterator in IsAccountInGame\(\) \([\#1345](https://github.com/EQEmu/Server/pull/1345)\)  
+**\[Alex\]** \[CLE\] Reset iterator in IsAccountInGame\(\) \([\#1345](https://github.com/EQEmu/Server/pull/1345)\)  
 **\[Alex\]** Add HasDisciplineLearned\(\) to Perl/Lua.  
 **\[Alex\]** Add ScaleNPC\(\) to Perl and Lua. \([\#1238](https://github.com/EQEmu/Server/pull/1238)\)  
 **\[Alex\]** Add SetRadiantCrystals\(\) and SetEbonCrystals\(\) to Perl/Lua. \([\#1159](https://github.com/EQEmu/Server/pull/1159)\)  
