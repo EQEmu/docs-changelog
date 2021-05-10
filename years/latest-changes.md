@@ -4,11 +4,15 @@ description: EverQuest Emulator server changes for the year 2020
 
 # 2021
 
-### 5/25/2021
+### 5/10/2021
 
 This changelog entry encompasses the past 6 months of updates and PR's
 
-**\[Akkadius\]** Move data aliases after null checks for safety \[skip ci\]  
+**\[Akkadius\]** Drone Build Pipeline \([\#1144](https://github.com/EQEmu/Server/pull/1144)\)  
+**\[Akkadius\]** \[DevTools\] Improve DevTools Toggling Options \([\#1161](https://github.com/EQEmu/Server/pull/1161)\)  
+**\[Akkadius\]** \[Door Opening\] Rule to let configure Animal Door Opening \([\#1231](https://github.com/EQEmu/Server/pull/1231)\)  
+**\[Akkadius\]** \[Repositories\] Insert repository improvements \([\#1236](https://github.com/EQEmu/Server/pull/1236)\)  
+**\[Akkadius\]** \[Scheduler\] Event scheduler implementation \([\#1257](https://github.com/EQEmu/Server/pull/1257)\)                                                                  **\[Akkadius\]** Move data aliases after null checks for safety \[skip ci\]  
 **\[Akkadius\]** Revert "\[BUG\] Fix for Group Leader Disband Issue"  
 **\[Akkadius\]** Update repo with latest template \[skip ci\]  
 **\[Akkadius\]** \[Hotfix\] DB Manifest  
@@ -38,11 +42,6 @@ This changelog entry encompasses the past 6 months of updates and PR's
 **\[Alex\]** \[Quest API\] Resolves traindiscs and scribespells issues in Perl/Lua. \([\#1249](https://github.com/EQEmu/Server/pull/1249)\)  
 **\[Alex\]** \[Rules\] Cleanup all unused rules. \([\#1308](https://github.com/EQEmu/Server/pull/1308)\)  
 **\[Alex\]** quest::getspellname\(\) and quest::getclassname\(\) fixes/additions. \([\#1158](https://github.com/EQEmu/Server/pull/1158)\)  
-**\[Chris Miles\]** Drone Build Pipeline \([\#1144](https://github.com/EQEmu/Server/pull/1144)\)  
-**\[Chris Miles\]** \[DevTools\] Improve DevTools Toggling Options \([\#1161](https://github.com/EQEmu/Server/pull/1161)\)  
-**\[Chris Miles\]** \[Door Opening\] Rule to let configure Animal Door Opening \([\#1231](https://github.com/EQEmu/Server/pull/1231)\)  
-**\[Chris Miles\]** \[Repositories\] Insert repository improvements \([\#1236](https://github.com/EQEmu/Server/pull/1236)\)  
-**\[Chris Miles\]** \[Scheduler\] Event scheduler implementation \([\#1257](https://github.com/EQEmu/Server/pull/1257)\)  
 **\[E Spause\]** Add safeguard for issue with mobs pathing to 0,0,0 on teleport nodes with values 0,0,0 \([\#1140](https://github.com/EQEmu/Server/pull/1140)\)  
 **\[JeffyW\]** \[Installer\] $ENV support, formatting, and optimizations \([\#1340](https://github.com/EQEmu/Server/pull/1340)\)  
 **\[KimLS\]** Fix for issue in movement manager where a drop aggro can happen and processing continues.  
