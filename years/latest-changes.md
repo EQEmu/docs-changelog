@@ -4,6 +4,44 @@ description: EverQuest Emulator server changes for the year 2020
 
 # 2021
 
+### 6/12/2021
+
+**\[Alex\]** \[Bots\] Add Bot scripting capabilities to the source. \([\#1378](https://github.com/EQEmu/Server/pull/1378)\)  
+**\[Alex\]** \[Bots\] Remove hardcoded race-class combinations from bots. \([\#1375](https://github.com/EQEmu/Server/pull/1375)\)  
+**\[Alex\]** \[Bug Fix\] Fix CMakeLists.txt so compile works. \([\#1387](https://github.com/EQEmu/Server/pull/1387)\)  
+**\[Alex\]** \[Commands\] Add \#findclass \[search criteria\] command. \([\#1384](https://github.com/EQEmu/Server/pull/1384)\)  
+**\[Alex\]** \[Commands\] Add \#viewzoneloot \[item id\] command. \([\#1382](https://github.com/EQEmu/Server/pull/1382)\)  
+**\[Alex\]** \[Pets\] Unhardcode Beastlord pet values. \([\#1379](https://github.com/EQEmu/Server/pull/1379)\)  
+**\[Alex\]** \[Quest API\] Add ChangeLastName\(\) and ClearLastName\(\) to Lua. \([\#1386](https://github.com/EQEmu/Server/pull/1386)\)  
+**\[Alex\]** \[Quest API\] Add SetHideMe\(\) to Perl/Lua. \([\#1388](https://github.com/EQEmu/Server/pull/1388)\)  
+**\[Alex\]** \[Quest API\] Add getcleannpcnamebyid\(npc\_id\) to Perl/Lua. \([\#1383](https://github.com/EQEmu/Server/pull/1383)\)  
+**\[Alex\]** \[Quest API\] Add several methods to Perl/Lua API for LDoN stuff. \([\#1356](https://github.com/EQEmu/Server/pull/1356)\)  
+**\[Alex\]** \[Shared Bank\] Add additional popup to shared bank warning message, as client-side filters can cause the message to be unseen. \([\#1368](https://github.com/EQEmu/Server/pull/1368)\)  
+**\[Alex\]** \[Spells\] Adds a rule to allow right-click memorize from spell scrolls. \([\#1377](https://github.com/EQEmu/Server/pull/1377)\)  
+**\[Dencelle\]** \[Bug Fix\] EntityList::AESpell fix for Pacify / Mez \([\#1354](https://github.com/EQEmu/Server/pull/1354)\)  
+**\[Dencelle\]** \[Bug Fix\] Fix for charges not being sold correctly \([\#1357](https://github.com/EQEmu/Server/pull/1357)\)  
+**\[Dencelle\]** \[Bug Fix\] NPC not breaking charm correctly \([\#1363](https://github.com/EQEmu/Server/pull/1363)\)  
+**\[Kurt Gilpin\]** \(HEAD -&gt; master, origin/master\) Fix crash when casting with no target \([\#1390](https://github.com/EQEmu/Server/pull/1390)\)  
+**\[Michael Cook \(mackal\)\]** Magic numbers bad \([\#1373](https://github.com/EQEmu/Server/pull/1373)\)  
+**\[Michael Cook \(mackal\)\]** This skill bonus was suppose to only apply to monks with epics \([\#1364](https://github.com/EQEmu/Server/pull/1364)\)  
+**\[Michael Cook \(mackal\)\]** \[Bug Fix\] EntityList::AESpell was off by one \([\#1351](https://github.com/EQEmu/Server/pull/1351)\)  
+**\[Michael Cook \(mackal\)\]** \[Fix\] Fix Spell Cast Time reduction issues \([\#1369](https://github.com/EQEmu/Server/pull/1369)\)  
+**\[Michael Cook \(mackal\)\]** \[Quest API\] Add Lua\_Mob::GetShuffledHateList \([\#1381](https://github.com/EQEmu/Server/pull/1381)\)  
+**\[Michael\]** \[Rule\] Allow Skill ups from items \(Default: On\) \([\#1376](https://github.com/EQEmu/Server/pull/1376)\)  
+**\[Paul Coene\]** \[GM Command\] \#list npcs Goto option now goes to higher Z if selected NPC is a boat. \([\#1349](https://github.com/EQEmu/Server/pull/1349)\)  
+**\[RoTPvP\]** \[PVP\] Pvp guard assist code. \(Guards will assist in PvP based on faction\) \([\#1367](https://github.com/EQEmu/Server/pull/1367)\)  
+**\[RoTPvP\]** \[Spells\] Added a pet check to Cazic Touch \([\#1365](https://github.com/EQEmu/Server/pull/1365)\)  
+**\[TurmoilToad\]** \[Docs\] Create CODE\_OF\_CONDUCT.md \([\#1360](https://github.com/EQEmu/Server/pull/1360)\)  
+**\[hg\]** \[Dynamic Zones\] Store min and max players on dz \([\#1355](https://github.com/EQEmu/Server/pull/1355)\)  
+**\[hg\]** \[Expeditions\] Avoid expedition leader change if only member \([\#1372](https://github.com/EQEmu/Server/pull/1372)\)  
+**\[hg\]** \[Expeditions\] Move member compass updates to dz \([\#1371](https://github.com/EQEmu/Server/pull/1371)\)  
+**\[hg\]** \[Expeditions\] Store members on dynamic zone \([\#1358](https://github.com/EQEmu/Server/pull/1358)\)  
+**\[hg\]** \[Quest API\] Add write overloads to lua packet quest api \([\#1366](https://github.com/EQEmu/Server/pull/1366)\)  
+**\[hg\]** \[Repository Generator\] Fix repository generator on windows \([\#1353](https://github.com/EQEmu/Server/pull/1353)\)  
+**\[regneq\]** \[Time\] strict spawn\_events now take into account EQ minute. \([\#1370](https://github.com/EQEmu/Server/pull/1370)\)  
+**\[splose\]** \[Bug Fix\] Allow GMs to chat when stunned \([\#1380](https://github.com/EQEmu/Server/pull/1380)\)  
+**\[splose\]** \[Rules\] Add rule to allow you to cast invis on already invis'd players \([\#1361](https://github.com/EQEmu/Server/pull/1361)\)
+
 ### 5/10/2021
 
 This changelog entry encompasses the past 6 months of updates and PR's
