@@ -4,6 +4,28 @@ description: EverQuest Emulator server changes for the year 2020
 
 # 2021
 
+### 7/27/2021
+
+**\[Akkadius\]** \[Hotfix\] SendIllusion revert to October  
+**\[Akkadius\]** \[Repositories\] Regenerate repositories with int64 support, reserved word support \([\#1440](https://github.com/EQEmu/Server/pull/1440)\)  
+**\[Akkadius\]** \[Repository Generator\] Add int64/bigint support, add support for reserved words \([\#1439](https://github.com/EQEmu/Server/pull/1439)\)  
+**\[Akkadius\]** \[Repository Usage\] Migrate NPC Scale Manager to use repositories \([\#1441](https://github.com/EQEmu/Server/pull/1441)\)  
+**\[Dencelle\]** \[Code\] Addition of zone constants for hard coding \([\#1443](https://github.com/EQEmu/Server/pull/1443)\)  
+**\[Dencelle\]** \[Commands\] Make \#maxskills work on target. \([\#1445](https://github.com/EQEmu/Server/pull/1445)\)  
+**\[E Spause\]** Add SetGMStatus to LUA, cleanup unused variable, cleanup naming of new function added to Client class, remove unneeded return on void function. \([\#1471](https://github.com/EQEmu/Server/pull/1471)\)  
+**\[Gangsta\]** \[Merchants\] Fix issue where an item purchased with 1 charges actually is bought with 0 charges  
+**\[Gangsta\]** \[Bugfix\] Fixes guards assisting mobs against players \([\#1448](https://github.com/EQEmu/Server/pull/1448)\)  
+**\[KayenEQ\]** Projectiles Update \([\#1468](https://github.com/EQEmu/Server/pull/1468)\)  
+**\[KayenEQ\]** \[Feature\] New SPAs pass 1 \([\#1454](https://github.com/EQEmu/Server/pull/1454)\)  
+**\[KayenEQ\]** \[Feature\] New SPAs pass 2 \([\#1459](https://github.com/EQEmu/Server/pull/1459)\)  
+**\[KimLS\]** Fix for compile issue when you either don't have openSSL or you're using a version not supported by httplib  
+**\[Kurt Gilpin\]** \[Inventory\] Remove Trader's Satchel ID from inventory.cpp \([\#1423](https://github.com/EQEmu/Server/pull/1423)\)  
+**\[Michael Cook \(mackal\)\]** Add defines \(commented\) for further known SPAs \([\#1446](https://github.com/EQEmu/Server/pull/1446)\)  
+**\[Michael Cook \(mackal\)\]** \[Bug Fix\] spell cast time cap issue introduced in [e5b9d72](https://github.com/EQEmu/Server/commit/e5b9d72b81e428aaac453281f127f1a4d83dd084) \([\#1435](https://github.com/EQEmu/Server/pull/1435)\)  
+**\[Michael Cook \(mackal\)\]** \[Spells Cleanup\] Unify and add most hardcoded spell IDs \([\#1438](https://github.com/EQEmu/Server/pull/1438)\)  
+**\[Natedog2012\]** Allow NPCs to aggro player pets with NPCAggro field set in database and new rule AggroPlayerPets set to true \([\#1450](https://github.com/EQEmu/Server/pull/1450)\)  
+**\[splose\]** \[Quest API\] Add $client-&gt;SetGMStatus\(\) \([\#1465](https://github.com/EQEmu/Server/pull/1465)\)
+
 ### 6/12/2021
 
 **\[Alex\]** \[Bots\] Add Bot scripting capabilities to the source. \([\#1378](https://github.com/EQEmu/Server/pull/1378)\)  
