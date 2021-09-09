@@ -1,3 +1,5 @@
+root: ./
+
 redirects:
   changelog/years/latest-changes: https://docs.eqemu.io/server/changelog/server/2021
   changelog/years/2020: https://docs.eqemu.io/server/changelog/server/2020
