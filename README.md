@@ -4,7 +4,7 @@
 
 Since 2003 \(17 years!\), we've used the legendary changelog.txt in our source repository to record our server code changes. This has worked great but from now on we are going to be using GitBook for all of our server changes!
 
-This will allow us to be able to create expressive changelog notes, with visuals, rich code examples which should be far easier to navigate and consume
+This will allow us to be able to create expressive changelog notes, with visuals, rich code examples which should be far easier to navigate and consume 
 
 ## Years
 
