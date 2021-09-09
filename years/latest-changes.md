@@ -4,7 +4,653 @@ description: EverQuest Emulator server changes for the year 2020
 
 # 2021
 
-### 7/27/2021
+## **9/9/2021**
+
+**\[Akkadius\]** \[Compile Fix\] Squelch warnings  
+**\[Akkadius\]** \[Quest API\] Port DiaWind Plugin to Native Quest API \([\#1521](https://github.com/EQEmu/Server/pull/1521)\)  
+**\[Akkadius\]** \[Hitpoints\] Remove HP Update Throttling \([\#1517](https://github.com/EQEmu/Server/pull/1517)\)  
+**\[Akkadius\]** \[Hotfix\] Fixing FMT Format Crash \([\#1516](https://github.com/EQEmu/Server/pull/1516)\)  
+**\[Akkadius\]** \[Logging\] Implement World GMSay Logging \([\#1505](https://github.com/EQEmu/Server/pull/1505)\)  
+**\[Akkadius\]** Pad zero size packets which is what we did on encrypted connections prior to [\#1464](https://github.com/EQEmu/Server/pull/1464) \([\#1504](https://github.com/EQEmu/Server/pull/1504)\)  
+**\[Akkadius\]** \[Repositories\] Add datetime support to repositories \([\#1503](https://github.com/EQEmu/Server/pull/1503)\)  
+**\[Akkadius\]** \[Server\] Tweak inter process keepalive timers; this is a very tiny overhead for inter-process chatter to check for connection liveness \([\#1502](https://github.com/EQEmu/Server/pull/1502)\)  
+**\[Akkadius\]** \[Shared Tasks\] Shared Tasks System Implementation \([\#1451](https://github.com/EQEmu/Server/pull/1451)\)  
+**\[Alex\]** \[Netcode\] Remove security from servertalk connections \([\#1464](https://github.com/EQEmu/Server/pull/1464)\)  
+**\[Dencelle\]** \[Cheat Detection\] Anti-Cheat reimplementation \([\#1434](https://github.com/EQEmu/Server/pull/1434)\)  
+**\[Gangsta\]** \[Quest API\] Sit method \([\#1449](https://github.com/EQEmu/Server/pull/1449)\)  
+**\[Gangsta\]** \[Spells\] IsInvisSpell\(\) Method + InvisRequireGroup Rule \([\#1453](https://github.com/EQEmu/Server/pull/1453)\)  
+**\[KayenEQ\]** \[Feature\] Implemented /shield ability and related affects \([\#1494](https://github.com/EQEmu/Server/pull/1494)\)  
+**\[KayenEQ\]** Fix SE\_TwinCastBlocker to block twinproc \([\#1476](https://github.com/EQEmu/Server/pull/1476)\)  
+**\[KayenEQ\]** Implemented SPA 482 SE\_Skill\_Base\_Damage\_Mod \([\#1474](https://github.com/EQEmu/Server/pull/1474)\)  
+**\[KayenEQ\]** Implemented SPA 498 and 499 \(extra attack chance effects\) \([\#1475](https://github.com/EQEmu/Server/pull/1475)\)  
+**\[KayenEQ\]** \[Spells\] Added constant labeling to all StatBonuses that use as arrays. \([\#1485](https://github.com/EQEmu/Server/pull/1485)\)  
+**\[KayenEQ\]** \[Spells\] Allow SE\_SecondaryForte 248 to be calculated as a bonus instead of hardcoded AA \([\#1507](https://github.com/EQEmu/Server/pull/1507)\)  
+**\[KayenEQ\]** \[Spells\] Bug fix for AOE Harmony/Lull \([\#1472](https://github.com/EQEmu/Server/pull/1472)\)  
+**\[KayenEQ\]** \[Spells\] Fix SPA 209 SE\_DispelBeneficial not causing aggro \([\#1495](https://github.com/EQEmu/Server/pull/1495)\)  
+**\[KayenEQ\]** \[Spells\] Focus related functions to use int32 instead of int16  
+**\[KayenEQ\]** \[Spells\] Implemented SPA 390 SE\_FcTimerLockout \([\#1496](https://github.com/EQEmu/Server/pull/1496)\)  
+**\[KayenEQ\]** \[Spells\] Implemented SPA 471 SE\_Double\_Melee\_Round \([\#1492](https://github.com/EQEmu/Server/pull/1492)\)  
+**\[KayenEQ\]** \[Spells\] Implemented SPA 476 SE\_Weapons\_Stance and Live-like AA Enable/Disable Toggle \([\#1477](https://github.com/EQEmu/Server/pull/1477)\)  
+**\[KayenEQ\]** \[Spells\] Implemented SPA 489 SE\_Worn\_Endurance\_Regen\_Cap \([\#1493](https://github.com/EQEmu/Server/pull/1493)\)  
+**\[KayenEQ\]** \[Spells\] Implemented SPA 504 and 506 \([\#1488](https://github.com/EQEmu/Server/pull/1488)\)  
+**\[KayenEQ\]** \[Spells\] Major update to cast restriction code and new spell field 'caster\_requirement\_id' \(field220\) implemented \([\#1508](https://github.com/EQEmu/Server/pull/1508)\)  
+**\[KayenEQ\]** \[Spells\] New SPA focus effects and focus limits \([\#1462](https://github.com/EQEmu/Server/pull/1462)\)  
+**\[KayenEQ\]** \[Spells\] SPIndex fix for wrong const in variable \([\#1487](https://github.com/EQEmu/Server/pull/1487)\)  
+**\[KayenEQ\]** \[Spells\] Updated pet suspend code to use spell effect data and bonuses \([\#1501](https://github.com/EQEmu/Server/pull/1501)\)  
+**\[KayenEQ\]** \[Spells\] Updated SE\_NegateSpellEffect SPA 382, new functionality \([\#1514](https://github.com/EQEmu/Server/pull/1514)\)  
+**\[KayenEQ\]** \[Spells\] Update for SPA 403 and 404 \([\#1482](https://github.com/EQEmu/Server/pull/1482)\)  
+**\[KayenEQ\]** \[Spells\] Update SPA 339 SE\_TriggerOnCast \([\#1478](https://github.com/EQEmu/Server/pull/1478)\)  
+**\[KayenEQ\]** \[Spells\] Update to SPA 130 and SPA 131 focus calculation, focus code improvements \([\#1486](https://github.com/EQEmu/Server/pull/1486)\)  
+**\[KayenEQ\]** Update to focus SE\_BlockNextSpell \([\#1479](https://github.com/EQEmu/Server/pull/1479)\)  
+**\[Kinglykrab\]** \[Bug Fix\] Shared Bank Charges Fix \([\#1511](https://github.com/EQEmu/Server/pull/1511)\)  
+**\[Kinglykrab\]** \[Quest API\] Add GetHealScale\(\) and GetSpellScale\(\) to Perl and Lua. \([\#1515](https://github.com/EQEmu/Server/pull/1515)\)  
+**\[Kinglykrab\]** \[Quest API\] Adds new methods to NPCs and Corpses \([\#1510](https://github.com/EQEmu/Server/pull/1510)\)  
+**\[Kinglykrab\]** \[Quest API\] Modify GetItemStat\(\) and GetSpellStat\(\) functionality. \([\#1509](https://github.com/EQEmu/Server/pull/1509)\)  
+**\[Logan\]** \[Mods\] Added Hastev3Cap \([\#1506](https://github.com/EQEmu/Server/pull/1506)\)  
+**\[Michael Cook \(mackal\)\]** \[CI\] Enable Bots \(Typo\) in Drone Config \([\#1481](https://github.com/EQEmu/Server/pull/1481)\)  
+**\[Michael Cook \(mackal\)\]** \[cmake\] Update min cmake version due to [fe7cb76](https://github.com/EQEmu/Server/commit/fe7cb764b2c41707766ac127c5f5ea713cc31258) \([\#1489](https://github.com/EQEmu/Server/pull/1489)\)  
+**\[Michael Cook \(mackal\)\]** Fix bots with ExtraAttackChance changes \([\#1480](https://github.com/EQEmu/Server/pull/1480)\)  
+**\[Michael Cook \(mackal\)\]** \[Spells\] Implement PVP resist and duration overrides \([\#1513](https://github.com/EQEmu/Server/pull/1513)\)  
+**\[splose\]** \[Hitpoints\] More HP Fixes - Remove Hacks \([\#1518](https://github.com/EQEmu/Server/pull/1518)\)
+
+### \[Shared Tasks\] Shared Task System Implementation \(\#1451\)
+
+See [\[Shared Tasks\] Design Doc](https://docs.google.com/document/d/1lGbAMLCt4ZcOxah6jG_M7D66JR2Z-F0hwCbB80X8yUU/edit#heading=h.qj70bkoeg4ls) for design details. Huge props to @hgtw co-writing this system with me over the past 6 months or so
+
+**Demo Videos During Development**
+
+* [\[Shared Tasks\] Task Update Stress Testing](https://www.youtube.com/watch?v=udLamI6_Gdg)
+* [\[Shared Tasks\] Demo \#2 Member Updating \(Delete, Add, Leader\) & Task Sync](https://www.youtube.com/watch?v=2GTjOri0hTQ)
+* [\[Shared Tasks\] Functionality Demo](https://www.youtube.com/watch?v=xmkkvWn9Mog)
+
+**Goals**
+
+* Shared tasks implementation to be as simple as possible
+* Shared tasks implementation to be least invasive to existing Quest API’s \(Keep majority existing functionality\)
+* Shared tasks to be least invasive to existing zone state management handling and use the zone-level state management to be a “client” or “subscriber” of \* world when handling a task of type “shared”
+* Utilize all of the zone-level state management but insert middleware to intercept functionality where world should be authoritative over state management
+* World should be able to fully restore shared task state on crash or restart and pick up exactly where it left off
+* Attempt to keep zone as un-aware of any shared task state data as possible; none if at all possible outside of caches for duplicate update checking
+
+**High Level Notes**
+
+* Shared task creation fully works out of the box either through existing `quest::assigntask()` or `quest::taskselector()` methods. You cannot mix shared tasks with regular tasks in the task selector window.
+* Validation fully in place for Shared Task requests / adding and removal of players
+* World keeps all shared task state and keeps the local state of players in sync with the single source of truth \(World\) through `SharedTaskManager`
+* `DynamicZones` were decoupled from `Expeditions` by HG to be able to be used flexibly with Shared Tasks
+* Most crucial shared task messaging support has been added. Eg. players being removed, added, leadership transfer, acquiring, validation etc.
+* Existing task packets consolidated and cleaned up
+* Lockouts fully implemented \(Task timers\)
+* Rate limiters added to some task commands for a small DOS mitigation layer
+* Shared Task completions get historically recorded for any sort of player logging
+
+**Client Command Support**
+
+* /tasktimers
+* /taskplayerlist
+* /taskremove
+* /taskmakeleader
+* /taskadd
+* /taskquit
+
+**New Tables**
+
+* character\_instance\_safereturns - Handles instance safe returns
+* character\_task\_timers - Character task timers / lockouts
+* completed\_shared\_task\_activity\_state - Historical Shared Task information
+* completed\_shared\_task\_members - Historical Shared Task information
+* completed\_shared\_tasks - Historical Shared Task information
+* shared\_task\_activity\_state - Shared Task activity state
+* shared\_task\_dynamic\_zones - Shared Task dynamic zones associations
+* shared\_task\_members - Shared Task members
+* shared\_tasks - Shared Tasks
+
+```text
+describe character_instance_safereturns;
++------------------+------------------+------+-----+---------+----------------+
+| Field            | Type             | Null | Key | Default | Extra          |
++------------------+------------------+------+-----+---------+----------------+
+| id               | int(10) unsigned | NO   | PRI | NULL    | auto_increment |
+| character_id     | int(10) unsigned | NO   | UNI | NULL    |                |
+| instance_zone_id | int(11)          | NO   |     | 0       |                |
+| instance_id      | int(11)          | NO   |     | 0       |                |
+| safe_zone_id     | int(11)          | NO   |     | 0       |                |
+| safe_x           | float            | NO   |     | 0       |                |
+| safe_y           | float            | NO   |     | 0       |                |
+| safe_z           | float            | NO   |     | 0       |                |
+| safe_heading     | float            | NO   |     | 0       |                |
++------------------+------------------+------+-----+---------+----------------+
+9 rows in set (0.001 sec)
+
+MariaDB [peq]> describe character_task_timers;
++--------------+------------------+------+-----+---------------------+----------------+
+| Field        | Type             | Null | Key | Default             | Extra          |
++--------------+------------------+------+-----+---------------------+----------------+
+| id           | int(10) unsigned | NO   | PRI | NULL                | auto_increment |
+| character_id | int(10) unsigned | NO   | MUL | 0                   |                |
+| task_id      | int(10) unsigned | NO   | MUL | 0                   |                |
+| timer_type   | int(11)          | NO   |     | 0                   |                |
+| expire_time  | datetime         | NO   |     | current_timestamp() |                |
++--------------+------------------+------+-----+---------------------+----------------+
+5 rows in set (0.001 sec)
+
+MariaDB [peq]> describe completed_shared_task_activity_state;
++----------------+------------+------+-----+---------+-------+
+| Field          | Type       | Null | Key | Default | Extra |
++----------------+------------+------+-----+---------+-------+
+| shared_task_id | bigint(20) | NO   | PRI | NULL    |       |
+| activity_id    | int(11)    | NO   | PRI | NULL    |       |
+| done_count     | int(11)    | YES  |     | NULL    |       |
+| updated_time   | datetime   | YES  |     | NULL    |       |
+| completed_time | datetime   | YES  |     | NULL    |       |
++----------------+------------+------+-----+---------+-------+
+5 rows in set (0.000 sec)
+
+MariaDB [peq]> describe completed_shared_task_members;
++----------------+------------+------+-----+---------+-------+
+| Field          | Type       | Null | Key | Default | Extra |
++----------------+------------+------+-----+---------+-------+
+| shared_task_id | bigint(20) | NO   | PRI | NULL    |       |
+| character_id   | bigint(20) | NO   | PRI | NULL    |       |
+| is_leader      | tinyint(4) | YES  |     | NULL    |       |
++----------------+------------+------+-----+---------+-------+
+3 rows in set (0.000 sec)
+
+MariaDB [peq]> describe completed_shared_tasks;
++-----------------+------------+------+-----+---------+-------+
+| Field           | Type       | Null | Key | Default | Extra |
++-----------------+------------+------+-----+---------+-------+
+| id              | bigint(20) | NO   | PRI | NULL    |       |
+| task_id         | int(11)    | YES  |     | NULL    |       |
+| accepted_time   | datetime   | YES  |     | NULL    |       |
+| expire_time     | datetime   | YES  |     | NULL    |       |
+| completion_time | datetime   | YES  |     | NULL    |       |
+| is_locked       | tinyint(1) | YES  |     | NULL    |       |
++-----------------+------------+------+-----+---------+-------+
+6 rows in set (0.000 sec)
+
+MariaDB [peq]> describe shared_task_activity_state;
++----------------+------------+------+-----+---------+-------+
+| Field          | Type       | Null | Key | Default | Extra |
++----------------+------------+------+-----+---------+-------+
+| shared_task_id | bigint(20) | NO   | PRI | NULL    |       |
+| activity_id    | int(11)    | NO   | PRI | NULL    |       |
+| done_count     | int(11)    | YES  |     | NULL    |       |
+| updated_time   | datetime   | YES  |     | NULL    |       |
+| completed_time | datetime   | YES  |     | NULL    |       |
++----------------+------------+------+-----+---------+-------+
+5 rows in set (0.000 sec)
+
+MariaDB [peq]> describe shared_task_dynamic_zones;
++-----------------+------------------+------+-----+---------+-------+
+| Field           | Type             | Null | Key | Default | Extra |
++-----------------+------------------+------+-----+---------+-------+
+| shared_task_id  | bigint(20)       | NO   | PRI | NULL    |       |
+| dynamic_zone_id | int(10) unsigned | NO   | PRI | NULL    |       |
++-----------------+------------------+------+-----+---------+-------+
+2 rows in set (0.000 sec)
+
+MariaDB [peq]> describe shared_task_members;
++----------------+------------+------+-----+---------+-------+
+| Field          | Type       | Null | Key | Default | Extra |
++----------------+------------+------+-----+---------+-------+
+| shared_task_id | bigint(20) | NO   | PRI | NULL    |       |
+| character_id   | bigint(20) | NO   | PRI | NULL    |       |
+| is_leader      | tinyint(4) | YES  |     | NULL    |       |
++----------------+------------+------+-----+---------+-------+
+3 rows in set (0.000 sec)
+
+MariaDB [peq]> describe shared_tasks;
++-----------------+------------+------+-----+---------+----------------+
+| Field           | Type       | Null | Key | Default | Extra          |
++-----------------+------------+------+-----+---------+----------------+
+| id              | bigint(20) | NO   | PRI | NULL    | auto_increment |
+| task_id         | int(11)    | YES  |     | NULL    |                |
+| accepted_time   | datetime   | YES  |     | NULL    |                |
+| expire_time     | datetime   | YES  |     | NULL    |                |
+| completion_time | datetime   | YES  |     | NULL    |                |
+| is_locked       | tinyint(1) | YES  |     | NULL    |                |
++-----------------+------------+------+-----+---------+----------------+
+6 rows in set (0.001 sec)
+```
+
+**Newly Handled Ops**
+
+* OP\_SharedTaskAcceptNew
+* OP\_SharedTaskAddPlayer
+* OP\_SharedTaskInvite
+* OP\_SharedTaskInviteResponse
+* OP\_SharedTaskMakeLeader
+* OP\_SharedTaskMemberChange
+* OP\_SharedTaskMemberInvite
+* OP\_SharedTaskMemberList
+* OP\_SharedTaskPlayerList
+* OP\_SharedTaskQuit
+* OP\_SharedTaskRemovePlayer
+* OP\_SharedTaskSelectWindow
+* OP\_TaskRequestTimer
+* OP\_TaskSelectWindow
+* OP\_TaskTimers
+
+**Relevant Shared Task Source Files**
+
+```text
+./common/shared_tasks.h
+./common/shared_tasks.cpp
+./common/repositories/completed_shared_tasks_repository.h
+./common/repositories/completed_shared_task_members_repository.h
+./common/repositories/shared_task_dynamic_zones_repository.h
+./common/repositories/completed_shared_task_activity_state_repository.h
+./common/repositories/shared_task_members_repository.h
+./common/repositories/shared_tasks_repository.h
+./common/repositories/base/base_shared_task_dynamic_zones_repository.h
+./common/repositories/base/base_completed_shared_tasks_repository.h
+./common/repositories/base/base_shared_tasks_repository.h
+./common/repositories/base/base_shared_task_activity_state_repository.h
+./common/repositories/base/base_completed_shared_task_members_repository.h
+./common/repositories/base/base_shared_task_members_repository.h
+./common/repositories/base/base_completed_shared_task_activity_state_repository.h
+./common/repositories/shared_task_activity_state_repository.h
+./zone/shared_task_zone_messaging.cpp
+./zone/shared_task_zone_messaging.h
+./world/shared_task_world_messaging.cpp
+./world/shared_task_manager.cpp
+./world/shared_task_world_messaging.h
+./world/shared_task_manager.h
+```
+
+**Images**
+
+![image](https://user-images.githubusercontent.com/3319450/132078967-18136d5d-c24f-4712-b1be-1904ce6a55cb.png) ![image](https://user-images.githubusercontent.com/3319450/132078975-22ad4174-a28e-4c90-9fee-6a5e6f0d6a11.png) ![image](https://user-images.githubusercontent.com/3319450/132078977-c3bcc499-ce33-4707-9314-a48fa6a2bdcd.png)
+
+### \[Quest API\] Port DiaWind Plugin to Native Quest API
+
+This PR ports the following Perl plugin to native source and is available to both Lua and Perl
+
+[https://docs.eqemu.io/quest-api/perl/plugins/diawind](https://docs.eqemu.io/quest-api/perl/plugins/diawind)
+
+**New Quest API Methods**
+
+```perl
+$client->DialogueWindow("markdown");
+$client->DiaWind("markdown"); // alias
+```
+
+```lua
+e.other:DialogueWindow("markdown");
+e.other:DiaWind("markdown"); // alias
+```
+
+**Markdown**
+
+* **{lb}** = Light Blue Color
+* **{y}** = Yellow Color
+* **{gold}** = Gold Color
+* **{g}** = Green Color
+* **{r}** = Red Color
+* **{gray}** = Gray Color
+* **~** = End Color Tag \(\)
+* **\[&gt;** = Response Text \(Not Visible\) - This is what the player responds with, for example: \[What else do we need to do?&gt;
+* **\[\]** = Response Text \(Visible\) - If a NPC has multiple brackets, it will give the player multiple saylinks to click, if there is just one \[bracket\] inline with the text, the player will respond by clicking 'Yes' on the window
+* **+66+** = Animation number - As long as there is a number between two plus signs together, the NPC will perform that animation
+* **+salute+** = Animation phrase - This references 
+* **{bullet}** - Equivalent to a bullet such as the one in this list
+* **{in}** - Will indent the text
+* **{linebreak}** - Will create a linebreak
+* **mysterious** - If the text 'mysterious' is anywhere in the text, it will not show up in the player window, but it will format the window as 'Mysterious Voice tells you'
+* **wintype:0/1** - If this is 1 the window will be Yes/No
+* **popupid:ID** - If this option is present, it will give the popup window and ID
+* **noquotes** - This tells the window to not use any quotes for special formatting at times
+* **nosound** - No sound affect will play with the window
+* **=Timer=** - If a number is specified between the two ==, it will countdown a timer on the popup window
+
+  **Images**
+
+![image](https://user-images.githubusercontent.com/3319450/132143042-0b3b1711-988b-40fb-a9aa-192b496c503d.png)
+
+**HTML Color Codes**
+
+You can also callout the follow color codes to use in the window as well by calling them out in brackets
+
+```text
+{color_name}something~
+```
+
+```cpp
+    {"black",                  "#000000"},
+    {"brown",                  "#804000"},
+    {"burgundy",               "#800000"},
+    {"cadet_blue",             "#77BFC7"},
+    {"cadet_blue_1",           "#4C787E"},
+    {"chartreuse",             "#8AFB17"},
+    {"chartreuse_1",           "#7FE817"},
+    {"chartreuse_2",           "#6CC417"},
+    {"chartreuse_3",           "#437C17"},
+    {"chocolate",              "#C85A17"},
+    {"coral",                  "#F76541"},
+    {"coral_1",                "#E55B3C"},
+    {"coral_2",                "#C34A2C"},
+    {"cornflower_blue",        "#151B8D"},
+    {"cyan",                   "#00FFFF"},
+    {"cyan_1",                 "#57FEFF"},
+    {"cyan_2",                 "#50EBEC"},
+    {"cyan_3",                 "#46C7C7"},
+    {"cyan_4",                 "#307D7E"},
+    {"dark_blue",              "#0000A0"},
+    {"dark_goldenrod",         "#AF7817"},
+    {"dark_goldenrod_1",       "#FBB117"},
+    {"dark_goldenrod_2",       "#E8A317"},
+    {"dark_goldenrod_3",       "#C58917"},
+    {"dark_goldenrod_4",       "#7F5217"},
+    {"dark_green",             "#254117"},
+    {"dark_grey",              "#808080"},
+    {"dark_olive_green",       "#CCFB5D"},
+    {"dark_olive_green_2",     "#BCE954"},
+    {"dark_olive_green_3",     "#A0C544"},
+    {"dark_olive_green_4",     "#667C26"},
+    {"dark_orange",            "#F88017"},
+    {"dark_orange_1",          "#F87217"},
+    {"dark_orange_2",          "#E56717"},
+    {"dark_orange_3",          "#7E3117"},
+    {"dark_orange_3",          "#C35617"},
+    {"dark_orchid",            "#7D1B7E"},
+    {"dark_orchid_1",          "#B041FF"},
+    {"dark_orchid_2",          "#A23BEC"},
+    {"dark_orchid_3",          "#8B31C7"},
+    {"dark_orchid_4",          "#571B7e"},
+    {"dark_purple",            "#800080"},
+    {"dark_salmon",            "#E18B6B"},
+    {"dark_sea_green",         "#8BB381"},
+    {"dark_sea_green_1",       "#C3FDB8"},
+    {"dark_sea_green_2",       "#B5EAAA"},
+    {"dark_sea_green_3",       "#99C68E"},
+    {"dark_sea_green_4",       "#617C58"},
+    {"dark_slate_blue",        "#2B3856"},
+    {"dark_slate_gray",        "#25383C"},
+    {"dark_slate_gray_1",      "#9AFEFF"},
+    {"dark_slate_gray_2",      "#8EEBEC"},
+    {"dark_slate_gray_3",      "#78c7c7"},
+    {"dark_slate_gray_4",      "#4C7D7E"},
+    {"dark_turquoise",         "#3B9C9C"},
+    {"dark_violet",            "#842DCE"},
+    {"deep_pink",              "#F52887"},
+    {"deep_pink_1",            "#E4287C"},
+    {"deep_pink_2",            "#C12267"},
+    {"deep_pink_3",            "#7D053F"},
+    {"deep_sky_blue",          "#3BB9FF"},
+    {"deep_sky_blue_1",        "#38ACEC"},
+    {"deep_sky_blue_2",        "#3090C7"},
+    {"deep_sky_blue_3",        "#25587E"},
+    {"dim_gray",               "#463E41"},
+    {"dodger_blue",            "#1589FF"},
+    {"dodger_blue_1",          "#157DEC"},
+    {"dodger_blue_2",          "#1569C7"},
+    {"dodger_blue_3",          "#153E7E"},
+    {"firebrick",              "#800517"},
+    {"firebrick_1",            "#F62817"},
+    {"firebrick_2",            "#E42217"},
+    {"firebrick_3",            "#C11B17"},
+    {"forest_green",           "#4E9258"},
+    {"forest_green_1",         "#808000"},
+    {"gold",                   "#D4A017"},
+    {"gold_1",                 "#FDD017"},
+    {"gold_2",                 "#EAC117"},
+    {"gold_3",                 "#C7A317"},
+    {"gold_4",                 "#806517"},
+    {"goldenrod",              "#EDDA74"},
+    {"goldenrod_1",            "#FBB917"},
+    {"goldenrod_2",            "#E9AB17"},
+    {"goldenrod_3",            "#C68E17"},
+    {"goldenrod_4",            "#805817"},
+    {"grass_green",            "#408080"},
+    {"gray",                   "#736F6E"},
+    {"gray_1",                 "#150517"},
+    {"gray_2",                 "#250517"},
+    {"gray_3",                 "#2B1B17"},
+    {"gray_4",                 "#302217"},
+    {"gray_5",                 "#302226"},
+    {"gray_6",                 "#342826"},
+    {"gray_7",                 "#34282C"},
+    {"gray_8",                 "#382D2C"},
+    {"gray_9",                 "#3b3131"},
+    {"gray_10",                "#3E3535"},
+    {"gray_11",                "#413839"},
+    {"gray_12",                "#41383C"},
+    {"gray_13",                "#463E3F"},
+    {"gray_14",                "#4A4344"},
+    {"gray_15",                "#4C4646"},
+    {"gray_16",                "#4E4848"},
+    {"gray_17",                "#504A4B"},
+    {"gray_18",                "#544E4F"},
+    {"gray_19",                "#565051"},
+    {"gray_19",                "#595454"},
+    {"gray_20",                "#5C5858"},
+    {"gray_21",                "#5F5A59"},
+    {"gray_22",                "#625D5D"},
+    {"gray_23",                "#646060"},
+    {"gray_24",                "#666362"},
+    {"gray_25",                "#696565"},
+    {"gray_26",                "#6D6968"},
+    {"gray_27",                "#6E6A6B"},
+    {"gray_28",                "#726E6D"},
+    {"gray_29",                "#747170"},
+    {"green",                  "#00FF00"},
+    {"green_1",                "#5FFB17"},
+    {"green_2",                "#59E817"},
+    {"green_3",                "#4CC417"},
+    {"green_4",                "#347C17"},
+    {"green_yellow",           "#B1FB17"},
+    {"hot_pink",               "#F660AB"},
+    {"hot_pink_1",             "#F665AB"},
+    {"hot_pink_2",             "#E45E9D"},
+    {"hot_pink_3",             "#C25283"},
+    {"hot_pink_4",             "#7D2252"},
+    {"indian_red",             "#F75D59"},
+    {"indian_red_2",           "#E55451"},
+    {"indian_red_3",           "#C24641"},
+    {"indian_red_4",           "#7E2217"},
+    {"khaki",                  "#ADA96E"},
+    {"khaki_1",                "#FFF380"},
+    {"khaki_2",                "#EDE275"},
+    {"khaki_3",                "#C9BE62"},
+    {"khaki_4",                "#827839"},
+    {"lavender",               "#E3E4FA"},
+    {"lavender_blush",         "#FDEEF4"},
+    {"lavender_blush_1",       "#EBDDE2"},
+    {"lavender_blush_2",       "#C8BBBE"},
+    {"lavender_blush_3",       "#817679"},
+    {"lawn_green",             "#87F717"},
+    {"lemon_chiffon",          "#FFF8C6"},
+    {"lemon_chiffon_1",        "#ECE5B6"},
+    {"lemon_chiffon_2",        "#C9C299"},
+    {"lemon_chiffon_3",        "#827B60"},
+    {"light_blue",             "#0000FF"},
+    {"light_blue_1",           "#ADDFFF"},
+    {"light_blue_2",           "#BDEDFF"},
+    {"light_blue_3",           "#AFDCEC"},
+    {"light_blue_4",           "#95B9C7"},
+    {"light_blue_5",           "#5E767E"},
+    {"light_coral",            "#E77471"},
+    {"light_cyan",             "#E0FFFF"},
+    {"light_cyan_1",           "#CFECEC"},
+    {"light_cyan_2",           "#AFC7C7"},
+    {"light_cyan_3",           "#717D7D"},
+    {"light_golden",           "#ECD672"},
+    {"light_goldenrod",        "#ECD872"},
+    {"light_goldenrod_1",      "#FFE87C"},
+    {"light_goldenrod_2",      "#C8B560"},
+    {"light_goldenrod_3",      "#817339"},
+    {"light_goldenrod_yellow", "#FAF8CC"},
+    {"light_grey",             "#C0C0C0"},
+    {"light_pink",             "#FAAFBA"},
+    {"light_pink_1",           "#F9A7B0"},
+    {"light_pink_2",           "#E799A3"},
+    {"light_pink_3",           "#C48189"},
+    {"light_pink_4",           "#7F4E52"},
+    {"light_purple",           "#FF0080"},
+    {"light_salmon",           "#F9966B"},
+    {"light_salmon_1",         "#E78A61"},
+    {"light_salmon_2",         "#C47451"},
+    {"light_salmon_3",         "#7F462C"},
+    {"light_sea_green",        "#3EA99F"},
+    {"light_sky_blue",         "#82CAFA"},
+    {"light_sky_blue_1",       "#A0CFEC"},
+    {"light_sky_blue_2",       "#87AFC7"},
+    {"light_sky_blue_3",       "#566D7E"},
+    {"light_slate_blue",       "#736AFF"},
+    {"light_slate_gray",       "#6D7B8D"},
+    {"light_steel_blue",       "#728FCE"},
+    {"light_steel_blue_1",     "#C6DEFF"},
+    {"light_steel_blue_2",     "#B7CEEC"},
+    {"light_steel_blue_3",     "#646D7E"},
+    {"lime_green",             "#41A317"},
+    {"magenta",                "#FF00FF"},
+    {"magenta_1",              "#F433FF"},
+    {"magenta_2",              "#E238EC"},
+    {"magenta_3",              "#C031C7"},
+    {"maroon",                 "#810541"},
+    {"maroon_1",               "#F535AA"},
+    {"maroon_2",               "#E3319D"},
+    {"maroon_3",               "#C12283"},
+    {"maroon_4",               "#7D0552"},
+    {"medium_aquamarine",      "#348781"},
+    {"medium_forest_green",    "#347235"},
+    {"medium_orchid",          "#B048B5"},
+    {"medium_orchid_1",        "#D462FF"},
+    {"medium_orchid_2",        "#C45AEC"},
+    {"medium_orchid_3",        "#A74AC7"},
+    {"medium_orchid_4",        "#6A287E"},
+    {"medium_purple",          "#8467D7"},
+    {"medium_purple_1",        "#9E7BFF"},
+    {"medium_purple_2",        "#9172EC"},
+    {"medium_purple_3",        "#7A5DC7"},
+    {"medium_purple_4",        "#4E387E"},
+    {"medium_sea_green",       "#306754"},
+    {"medium_slate_blue",      "#5E5A80"},
+    {"medium_spring_green",    "#348017"},
+    {"medium_turquoise",       "#48CCCD"},
+    {"medium_violet_red",      "#CA226B"},
+    {"midnight_blue",          "#151B54"},
+    {"orange",                 "#FF8040"},
+    {"pale_turquoise",         "#92C7C7"},
+    {"pale_turquoise_1",       "#5E7D7E"},
+    {"pale_violet_red",        "#D16587"},
+    {"pale_violet_red_1",      "#F778A1"},
+    {"pale_violet_red_2",      "#E56E94"},
+    {"pale_violet_red_3",      "#C25A7C"},
+    {"pale_violet_red_4",      "#7E354D"},
+    {"pastel_green",           "#00FF00"},
+    {"pink",                   "#FAAFBE"},
+    {"pink_1",                 "#FF00FF"},
+    {"pink_2",                 "#E7A1B0"},
+    {"pink_3",                 "#C48793"},
+    {"pink_4",                 "#7F525D"},
+    {"plum",                   "#B93B8F"},
+    {"plum_1",                 "#F9B7FF"},
+    {"plum_2",                 "#E6A9EC"},
+    {"plum_3",                 "#C38EC7"},
+    {"plum_4",                 "#7E587E"},
+    {"purple",                 "#8E35EF"},
+    {"purple_1",               "#893BFF"},
+    {"purple_2",               "#7F38EC"},
+    {"purple_3",               "#6C2DC7"},
+    {"purple_4",               "#461B7E"},
+    {"red",                    "#FF0000"},
+    {"red_1",                  "#F62217"},
+    {"red_2",                  "#E41B17"},
+    {"rosy_brown",             "#B38481"},
+    {"rosy_brown_1",           "#FBBBB9"},
+    {"rosy_brown_2",           "#E8ADAA"},
+    {"rosy_brown_3",           "#C5908E"},
+    {"rosy_brown_4",           "#7F5A58"},
+    {"royal_blue",             "#2B60DE"},
+    {"royal_blue_1",           "#306EFF"},
+    {"royal_blue_2",           "#2B65EC"},
+    {"royal_blue_3",           "#2554C7"},
+    {"royal_blue_4",           "#15317E"},
+    {"salmon_1",               "#F88158"},
+    {"salmon_2",               "#E67451"},
+    {"salmon_3",               "#C36241"},
+    {"salmon_4",               "#7E3817"},
+    {"sandy_brown",            "#EE9A4D"},
+    {"sea_green",              "#4E8975"},
+    {"sea_green_1",            "#6AFB92"},
+    {"sea_green_2",            "#64E986"},
+    {"sea_green_3",            "#54C571"},
+    {"sea_green_4",            "#387C44"},
+    {"sienna",                 "#8A4117"},
+    {"sienna_1",               "#F87431"},
+    {"sienna_2",               "#E66C2C"},
+    {"sienna_3",               "#C35817"},
+    {"sienna_4",               "#7E3517"},
+    {"sky_blue",               "#82CAFF"},
+    {"sky_blue_1",             "#6698FF"},
+    {"sky_blue_2",             "#79BAEC"},
+    {"sky_blue_3",             "#659EC7"},
+    {"sky_blue_4",             "#41627E"},
+    {"slate_blue",             "#357EC7"},
+    {"slate_blue_1",           "#737CA1"},
+    {"slate_blue_2",           "#6960EC"},
+    {"slate_blue_3",           "#342D7E"},
+    {"slate_gray",             "#657383"},
+    {"slate_gray_1",           "#C2DFFF"},
+    {"slate_gray_2",           "#B4CFEC"},
+    {"slate_gray_3",           "#98AFC7"},
+    {"slate_gray_4",           "#616D7E"},
+    {"spring_green",           "#4AA02C"},
+    {"spring_green_1",         "#5EFB6E"},
+    {"spring_green_2",         "#57E964"},
+    {"spring_green_3",         "#4CC552"},
+    {"spring_green_4",         "#347C2C"},
+    {"steel_blue",             "#4863A0"},
+    {"steel_blue_1",           "#5CB3FF"},
+    {"steel_blue_2",           "#56A5EC"},
+    {"steel_blue_3",           "#488AC7"},
+    {"steel_blue_4",           "#2B547E"},
+    {"thistle",                "#D2B9D3"},
+    {"thistle_1",              "#FCDFFF"},
+    {"thistle_2",              "#E9CFEC"},
+    {"thistle_3",              "#C6AEC7"},
+    {"thistle_4",              "#806D7E"},
+    {"turquoise",              "#00FFFF"},
+    {"turquoise_1",            "#43C6DB"},
+    {"turquoise_2",            "#52F3FF"},
+    {"turquoise_3",            "#4EE2EC"},
+    {"turquoise_4",            "#43BFC7"},
+    {"violet",                 "#8D38C9"},
+    {"violet_red",             "#F6358A"},
+    {"violet_red_1",           "#F6358A"},
+    {"violet_red_2",           "#E4317F"},
+    {"violet_red_3",           "#C12869"},
+    {"violet_red_4",           "#7D0541"},
+    {"white",                  "#FFFFFF"},
+    {"yellow",                 "#FFFF00"},
+    {"yellow_1",               "#FFFC17"},
+    {"yellow_green",           "#52D017"}
+};
+```
+
+### \[Logging\] Implement World GMSay Logging \(\#1505\)
+
+Also work peeled from \#1451
+
+This enables world GM say logging and relays all messages to all zoneservers.
+
+This was especially helpful during Shared Tasks work where we need / want to see real live communication of packets being sent back and forth between world and zone
+
+**Example**
+
+![image](https://user-images.githubusercontent.com/3319450/130721233-a63c792b-accc-4a32-ad8b-b1ba3aa4dfa7.png)
+
+This also adds the following rule which is enabled by default
+
+```text
+RULE_BOOL(Logging, WorldGMSayLogging, true, "Relay worldserver logging to zone processes via GM say output")
+```
+
+Of course operators will need to be mindful of not turning on excessive logging but should be fine performance wise under normal conditions
+
+## 7/27/2021
 
 **\[Akkadius\]** \[Hotfix\] SendIllusion revert to October  
 **\[Akkadius\]** \[Repositories\] Regenerate repositories with int64 support, reserved word support \([\#1440](https://github.com/EQEmu/Server/pull/1440)\)  
@@ -26,7 +672,7 @@ description: EverQuest Emulator server changes for the year 2020
 **\[Natedog2012\]** Allow NPCs to aggro player pets with NPCAggro field set in database and new rule AggroPlayerPets set to true \([\#1450](https://github.com/EQEmu/Server/pull/1450)\)  
 **\[splose\]** \[Quest API\] Add $client-&gt;SetGMStatus\(\) \([\#1465](https://github.com/EQEmu/Server/pull/1465)\)
 
-### 6/12/2021
+## 6/12/2021
 
 **\[Alex\]** \[Bots\] Add Bot scripting capabilities to the source. \([\#1378](https://github.com/EQEmu/Server/pull/1378)\)  
 **\[Alex\]** \[Bots\] Remove hardcoded race-class combinations from bots. \([\#1375](https://github.com/EQEmu/Server/pull/1375)\)  
@@ -64,7 +710,7 @@ description: EverQuest Emulator server changes for the year 2020
 **\[splose\]** \[Bug Fix\] Allow GMs to chat when stunned \([\#1380](https://github.com/EQEmu/Server/pull/1380)\)  
 **\[splose\]** \[Rules\] Add rule to allow you to cast invis on already invis'd players \([\#1361](https://github.com/EQEmu/Server/pull/1361)\)
 
-### 5/10/2021
+## 5/10/2021
 
 This changelog entry encompasses the past 6 months of updates and PR's
 
@@ -172,7 +818,7 @@ This changelog entry encompasses the past 6 months of updates and PR's
 **\[splose\]** add quest::get\_spell\_level\(uint16 spell\_id, uint8 class\_id\) \([\#1295](https://github.com/EQEmu/Server/pull/1295)\)  
 **\[splose\]** setting spawn2.version to -1 will now properly spawn mobs in all zone versions \([\#1299](https://github.com/EQEmu/Server/pull/1299)\)
 
-### 1/25/2021
+## 1/25/2021
 
 **Kinglykrab**
 
@@ -194,7 +840,7 @@ This changelog entry encompasses the past 6 months of updates and PR's
 
 
 
-### 1/3/2021
+## 1/3/2021
 
 #### Kinglykrab
 
